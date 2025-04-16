@@ -9,6 +9,7 @@ using Microsoft.Extensions.Localization;
 using Wpf.Ui.Controls;
 using FuckingDo.Resources;
 using FuckingDo.Views.Pages;
+using FuckingDo.Views.Pages.ScriptExecutor;
 
 
 namespace FuckingDo.ViewModels.Windows;
@@ -21,7 +22,7 @@ public partial class MainWindowViewModel(IStringLocalizer<Translations> localize
     [ObservableProperty]
     private ObservableCollection<object> _menuItems =
     [
-//        new NavigationViewItem("Home", SymbolRegular.Home24, typeof(DashboardPage)),
+        //new NavigationViewItem("Home", SymbolRegular.Home24, typeof(DashboardPage)),
 //        new NavigationViewItem()
 //        {
 //            Content = "Design guidance",
@@ -34,26 +35,8 @@ public partial class MainWindowViewModel(IStringLocalizer<Translations> localize
 //            },
 //        },
 //        new NavigationViewItem("All samples", SymbolRegular.List24, typeof(AllControlsPage)),
-//        new NavigationViewItemSeparator(),
-//        new NavigationViewItem("Basic Input", SymbolRegular.CheckboxChecked24, typeof(BasicInputPage))
-//        {
-//            MenuItemsSource = new object[]
-//            {
-//                new NavigationViewItem(nameof(Anchor), typeof(AnchorPage)),
-//                new NavigationViewItem(nameof(Wpf.Ui.Controls.Button), typeof(ButtonPage)),
-//                new NavigationViewItem(nameof(DropDownButton), typeof(DropDownButtonPage)),
-//                new NavigationViewItem(nameof(HyperlinkButton), typeof(HyperlinkButtonPage)),
-//                new NavigationViewItem(nameof(ToggleButton), typeof(ToggleButtonPage)),
-//                new NavigationViewItem(nameof(ToggleSwitch), typeof(ToggleSwitchPage)),
-//                new NavigationViewItem(nameof(CheckBox), typeof(CheckBoxPage)),
-//                new NavigationViewItem(nameof(ComboBox), typeof(ComboBoxPage)),
-//                new NavigationViewItem(nameof(RadioButton), typeof(RadioButtonPage)),
-//                new NavigationViewItem(nameof(RatingControl), typeof(RatingPage)),
-//                new NavigationViewItem(nameof(ThumbRate), typeof(ThumbRatePage)),
-//                new NavigationViewItem(nameof(SplitButton), typeof(SplitButtonPage)),
-//                new NavigationViewItem(nameof(Slider), typeof(SliderPage)),
-//            },
-//        },
+        new NavigationViewItemSeparator(),
+        new NavigationViewItem("Script Executor", SymbolRegular.DocumentJavascript24, typeof(ScriptExecutorPage))
 //        new NavigationViewItem
 //        {
 //            Content = "Collections",

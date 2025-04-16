@@ -16,9 +16,15 @@ public sealed partial class SettingsViewModel(INavigationService navigationServi
 
     [ObservableProperty]
     private string _appVersion = string.Empty;
-
+    
     [ObservableProperty]
     private ApplicationTheme _currentApplicationTheme = ApplicationTheme.Unknown;
+
+    [ObservableProperty]
+    private int _currentApplicationTransparency = 1;
+
+    [ObservableProperty]
+    private string _currentApplicationLanguage = "¼òÌåÖÐÎÄ";
 
     [ObservableProperty]
     private NavigationViewPaneDisplayMode _currentApplicationNavigationStyle =

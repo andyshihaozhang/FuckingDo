@@ -1,4 +1,5 @@
-﻿using FuckingDo.Resources;
+﻿using FuckingDo.DependencyModel;
+using FuckingDo.Resources;
 using FuckingDo.Services;
 using FuckingDo.Services.Contracts;
 using FuckingDo.ViewModels.Pages;
@@ -38,6 +39,13 @@ namespace FuckingDo
                 // Top-level pages
                 _ = services.AddSingleton<SettingsPage>();
                 _ = services.AddSingleton<SettingsViewModel>();
+
+                // All other pages and view models
+                _ = services.AddTransientFromNamespace("FuckingDo.Views", GalleryAssembly.Asssembly);
+                _ = services.AddTransientFromNamespace(
+                    "FuckingDo.ViewModels",
+                    GalleryAssembly.Asssembly
+                );
 
                 _ = services.AddStringLocalizer(b =>
                 {

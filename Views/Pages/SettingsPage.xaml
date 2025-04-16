@@ -67,6 +67,39 @@
             </ComboBox>
         </ui:CardControl>
 
+        <ui:CardControl Margin="0,0,0,12" Icon="{ui:SymbolIcon EyeLines24}">
+            <ui:CardControl.Header>
+                <ui:TextBlock
+                    Grid.Row="0"
+                    FontTypography="Body"
+                    Text="Transparency" />
+            </ui:CardControl.Header>
+            <Slider
+                Grid.Column="1"
+                Width="200"
+                Margin="0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Maximum="100"
+                Minimum="0"
+                Value="{Binding ViewModel.CurrentApplicationTransparency, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:SettingsPage}, Mode=TwoWay}" />
+        </ui:CardControl>
+
+        <ui:CardControl Margin="0,0,0,12" Icon="{ui:SymbolIcon LocalLanguage24}">
+            <ui:CardControl.Header>
+                <ui:TextBlock
+                    Grid.Row="0"
+                    FontTypography="Body"
+                    Text="Language" />
+            </ui:CardControl.Header>
+            <ComboBox
+                Grid.Column="1"
+                MinWidth="200"
+                SelectedIndex="{Binding ViewModel.CurrentApplicationLanguage, Converter={StaticResource PaneDisplayModeToIndexConverter}, Mode=TwoWay}">
+                <ComboBoxItem Content="简体中文" />
+                <ComboBoxItem Content="Endlish" />
+            </ComboBox>
+        </ui:CardControl>
         <ui:TextBlock
             Margin="0,24,0,8"
             FontTypography="BodyStrong"
@@ -86,12 +119,12 @@
                         Grid.Row="0"
                         Grid.Column="0"
                         FontTypography="Body"
-                        Text="WPF UI" />
+                        Text="Fucking Do" />
                     <ui:TextBlock
                         Grid.Row="1"
                         Grid.Column="0"
                         Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}"
-                        Text="© 2025 lepo.co | Leszek Pomianowski &amp; WPF UI Contributors" />
+                        Text="© 2025 WPF UI | Andy &amp; Fucking Do Contributors" />
                     <TextBlock
                         Grid.Row="0"
                         Grid.RowSpan="2"
@@ -112,7 +145,7 @@
                     <TextBlock
                         Grid.Column="1"
                         Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}"
-                        Text="git clone https://github.com/lepoco/wpfui.git" />
+                        Text="https://github.com/andyshihaozhang/FuckingDo.git" />
                 </Grid>
                 <ui:Anchor
                     Margin="0"

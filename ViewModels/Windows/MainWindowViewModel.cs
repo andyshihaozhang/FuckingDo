@@ -22,7 +22,7 @@ public partial class MainWindowViewModel(IStringLocalizer<Translations> localize
     [ObservableProperty]
     private ObservableCollection<object> _menuItems =
     [
-        //new NavigationViewItem("Home", SymbolRegular.Home24, typeof(DashboardPage)),
+        new NavigationViewItem("Home", SymbolRegular.Home24, typeof(DashboardPage)),
 //        new NavigationViewItem()
 //        {
 //            Content = "Design guidance",

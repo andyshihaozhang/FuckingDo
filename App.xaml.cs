@@ -37,6 +37,8 @@ namespace FuckingDo
                 _ = services.AddSingleton<INavigationService, NavigationService>();
 
                 // Top-level pages
+                _ = services.AddSingleton<DashboardPage>();
+                _ = services.AddSingleton<DashboardViewModel>();
                 _ = services.AddSingleton<SettingsPage>();
                 _ = services.AddSingleton<SettingsViewModel>();
 

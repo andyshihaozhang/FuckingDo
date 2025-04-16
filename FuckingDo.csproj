@@ -2,7 +2,8 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
+	  <ApplicationIcon>Logo.ico</ApplicationIcon>
+	  <TargetFramework>net8.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
@@ -16,6 +17,22 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Logo.png" />
+    <None Remove="Assets\pexels-johannes-plenio-1103970.jpg" />
+    <None Remove="Assets\WinUiGallery\Button.png" />
+    <None Remove="Assets\WinUiGallery\Flyout.png" />
+    <None Remove="Assets\WinUiGallery\MenuBar.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Logo.png" />
+    <Resource Include="Assets\pexels-johannes-plenio-1103970.jpg" />
+    <Resource Include="Assets\WinUiGallery\Button.png" />
+    <Resource Include="Assets\WinUiGallery\Flyout.png" />
+    <Resource Include="Assets\WinUiGallery\MenuBar.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
     <PackageReference Include="Lepo.i18n.DependencyInjection" Version="2.0.0" />
     <PackageReference Include="Lepo.i18n.Wpf" Version="2.0.0" />
@@ -23,6 +40,7 @@
     <PackageReference Include="WPF-UI" Version="4.0.2" />
     <PackageReference Include="WPF-UI.DependencyInjection" Version="4.0.2" />
     <PackageReference Include="WPF-UI.SyntaxHighlight" Version="4.0.2" />
+    <PackageReference Include="WPF-UI.Tray" Version="4.0.2" />
   </ItemGroup>
 
 </Project>

@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:FuckingDo.Views.Windows"
         xmlns:controls="clr-namespace:FuckingDo.Controls"
         xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
-        xmlns:i18n="http://schemas.lepo.co/i18n/2022/xaml"
-        Width="1450"
+        xmlns:i18n="http://schemas.lepo.co/i18n/2022/xaml" xmlns:tray="http://schemas.lepo.co/wpfui/2022/xaml/tray"
+                 Width="1450"
         Height="600"
         MinWidth="900"
         d:DesignHeight="650"
@@ -65,6 +65,20 @@
             Title="Fucking Do"
             Grid.Row="0"
             CloseWindowByDoubleClickOnIcon="True">
+            <ui:TitleBar.Icon>
+                <ui:ImageIcon Source="pack://application:,,,/Assets/Logo.png" />
+            </ui:TitleBar.Icon>
         </ui:TitleBar>
+
+        <tray:NotifyIcon
+            Grid.Row="0"
+            FocusOnLeftClick="True"
+            Icon="pack://application:,,,/Assets/Logo.png"
+            MenuOnRightClick="True"
+            TooltipText="Fucking Do">
+            <tray:NotifyIcon.Menu>
+                <ContextMenu ItemsSource="{Binding ViewModel.TrayMenuItems, Mode=OneWay}" />
+            </tray:NotifyIcon.Menu>
+        </tray:NotifyIcon>
     </Grid>
 </ui:FluentWindow>

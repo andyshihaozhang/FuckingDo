@@ -65,6 +65,6 @@ public class ApplicationHostService : IHostedService
         }
 
         // TODO load main page
-        _ = mainWindow.NavigationView.Navigate(typeof(SettingsPage));
+        _ = mainWindow.NavigationView.Navigate(typeof(DashboardPage));
     }
 }

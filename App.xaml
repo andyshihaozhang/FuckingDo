@@ -1,0 +1,26 @@
+﻿<Application x:Class="FuckingDo.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:FuckingDo"
+             xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+             xmlns:syntax="http://schemas.lepo.co/wpfui/2022/xaml/syntax"
+             xmlns:helpers="clr-namespace:FuckingDo.Helpers"
+             Exit="OnExit"
+             Startup="OnStartup">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ui:ThemesDictionary Theme="Light" />
+                <ui:ControlsDictionary />
+
+                <syntax:SyntaxHighlightDictionary />
+
+                <ResourceDictionary Source="Controls/GalleryNavigationPresenter.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <helpers:EnumToBooleanConverter x:Key="EnumToBooleanConverter" />
+            <helpers:ThemeToIndexConverter x:Key="ThemeToIndexConverter" />
+            <helpers:PaneDisplayModeToIndexConverter x:Key="PaneDisplayModeToIndexConverter" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

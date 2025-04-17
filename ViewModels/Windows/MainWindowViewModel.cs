@@ -10,6 +10,7 @@ using Wpf.Ui.Controls;
 using FuckingDo.Resources;
 using FuckingDo.Views.Pages;
 using FuckingDo.Views.Pages.ScriptExecutor;
+using FuckingDo.Views.Pages.MDEditor;
 
 
 namespace FuckingDo.ViewModels.Windows;
@@ -36,7 +37,8 @@ public partial class MainWindowViewModel(IStringLocalizer<Translations> localize
 //        },
 //        new NavigationViewItem("All samples", SymbolRegular.List24, typeof(AllControlsPage)),
         new NavigationViewItemSeparator(),
-        new NavigationViewItem("Script Executor", SymbolRegular.DocumentJavascript24, typeof(ScriptExecutorPage))
+        new NavigationViewItem("Script Executor", SymbolRegular.DocumentJavascript24, typeof(ScriptExecutorPage)),
+        new NavigationViewItem("MD Editor", SymbolRegular.TextBulletListSquare24, typeof(MDEditorPage))
 //        new NavigationViewItem
 //        {
 //            Content = "Collections",

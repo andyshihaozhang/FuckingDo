@@ -5,9 +5,9 @@
 
 using FuckingDo.ViewModels;
 
-namespace FuckingDo.DependencyModel;
+namespace FuckingDo.Extensions;
 
-internal static class ServiceCollectionExtensions
+internal static class ServiceCollectionExtension
 {
     public static IServiceCollection AddTransientFromNamespace(
         this IServiceCollection services,

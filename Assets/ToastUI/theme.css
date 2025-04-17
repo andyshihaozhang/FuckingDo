@@ -1,0 +1,19 @@
+[data-theme="Dark"] {
+    --editor-bg: #2d2d2d;
+    --editor-text: #e0e0e0;
+}
+
+[data-theme="Light"] {
+    --editor-bg: #ffffff;
+    --editor-text: #333333;
+}
+
+[data-theme="HighContrast"] {
+    --editor-bg: #ffffff;
+    --editor-text: #333333;
+}
+
+[data-theme="Unknown"] {
+    --editor-bg: #ffffff;
+    --editor-text: #333333;
+}

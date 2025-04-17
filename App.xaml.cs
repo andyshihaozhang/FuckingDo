@@ -1,4 +1,4 @@
-﻿using FuckingDo.DependencyModel;
+﻿using FuckingDo.Extensions;
 using FuckingDo.Resources;
 using FuckingDo.Services;
 using FuckingDo.Services.Contracts;

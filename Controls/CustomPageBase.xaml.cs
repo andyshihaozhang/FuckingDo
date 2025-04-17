@@ -8,13 +8,13 @@ using System.Windows.Controls;
 namespace FuckingDo.Controls;
 
 [ContentProperty(nameof(ExampleContent))]
-public class ControlExample : Control
+public class CustomPageBase : Control
 {
     /// <summary>Identifies the <see cref="HeaderText"/> dependency property.</summary>
     public static readonly DependencyProperty HeaderTextProperty = DependencyProperty.Register(
         nameof(HeaderText),
         typeof(string),
-        typeof(ControlExample),
+        typeof(CustomPageBase),
         new PropertyMetadata(null)
     );
 
@@ -22,7 +22,7 @@ public class ControlExample : Control
     public static readonly DependencyProperty ExampleContentProperty = DependencyProperty.Register(
         nameof(ExampleContent),
         typeof(object),
-        typeof(ControlExample),
+        typeof(CustomPageBase),
         new PropertyMetadata(null)
     );
 
@@ -30,7 +30,7 @@ public class ControlExample : Control
     public static readonly DependencyProperty XamlCodeProperty = DependencyProperty.Register(
         nameof(XamlCode),
         typeof(string),
-        typeof(ControlExample),
+        typeof(CustomPageBase),
         new PropertyMetadata(null)
     );
 
@@ -38,12 +38,12 @@ public class ControlExample : Control
     public static readonly DependencyProperty XamlCodeSourceProperty = DependencyProperty.Register(
         nameof(XamlCodeSource),
         typeof(Uri),
-        typeof(ControlExample),
+        typeof(CustomPageBase),
         new PropertyMetadata(
             null,
             static (o, args) =>
             {
-                ((ControlExample)o).OnXamlCodeSourceChanged((Uri?)args.NewValue);
+                ((CustomPageBase)o).OnXamlCodeSourceChanged((Uri?)args.NewValue);
             }
         )
     );
@@ -52,7 +52,7 @@ public class ControlExample : Control
     public static readonly DependencyProperty CsharpCodeProperty = DependencyProperty.Register(
         nameof(CsharpCode),
         typeof(string),
-        typeof(ControlExample),
+        typeof(CustomPageBase),
         new PropertyMetadata(null)
     );
 
@@ -60,12 +60,12 @@ public class ControlExample : Control
     public static readonly DependencyProperty CsharpCodeSourceProperty = DependencyProperty.Register(
         nameof(CsharpCodeSource),
         typeof(Uri),
-        typeof(ControlExample),
+        typeof(CustomPageBase),
         new PropertyMetadata(
             null,
             static (o, args) =>
             {
-                ((ControlExample)o).OnCsharpCodeSourceChanged((Uri?)args.NewValue);
+                ((CustomPageBase)o).OnCsharpCodeSourceChanged((Uri?)args.NewValue);
             }
         )
     );

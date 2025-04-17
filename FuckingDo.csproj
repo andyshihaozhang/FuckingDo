@@ -19,6 +19,7 @@
   <ItemGroup>
     <None Remove="Assets\Logo.png" />
     <None Remove="Assets\pexels-johannes-plenio-1103970.jpg" />
+    <None Remove="Assets\ToastUI\loader.js" />
     <None Remove="Assets\WinUiGallery\Button.png" />
     <None Remove="Assets\WinUiGallery\Flyout.png" />
     <None Remove="Assets\WinUiGallery\MenuBar.png" />
@@ -37,10 +38,15 @@
     <PackageReference Include="Lepo.i18n.DependencyInjection" Version="2.0.0" />
     <PackageReference Include="Lepo.i18n.Wpf" Version="2.0.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.4" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3179.45" />
     <PackageReference Include="WPF-UI" Version="4.0.2" />
     <PackageReference Include="WPF-UI.DependencyInjection" Version="4.0.2" />
     <PackageReference Include="WPF-UI.SyntaxHighlight" Version="4.0.2" />
     <PackageReference Include="WPF-UI.Tray" Version="4.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Assets\ToastUI\ToastJs\" />
   </ItemGroup>
 
 </Project>

@@ -45,8 +45,10 @@
     <PackageReference Include="WPF-UI.Tray" Version="4.0.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Assets\ToastUI\ToastJs\" />
-  </ItemGroup>
+	<ItemGroup>
+		<Content Include="Assets\ToastUI\**\*.*">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
 
 </Project>

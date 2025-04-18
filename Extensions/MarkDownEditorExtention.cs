@@ -15,24 +15,23 @@ namespace FuckingDo.Extensions
     public class MarkDownEditorExtention : IDisposable
     {
         private readonly WebView2 _webView;
-        private readonly string _editorHtmlPath = Path.Combine(AppContext.BaseDirectory, "Assets/ToastUI/index.html");
+        private readonly string _editorHtmlPath = Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, @"Assets/ToastUI/index.html");
         public event EventHandler<string>? OnContentChanged;
 
 
         public MarkDownEditorExtention(WebView2 webView)
         {
             _webView = webView;
-        }
 
-        public async Task InitializeAsync()
-        {
-            // 初始化WebView2环境
-            var env = await CoreWebView2Environment.CreateAsync();
-            await _webView.EnsureCoreWebView2Async(env);
+            _webView.SetCurrentValue(
+                WebView2.SourceProperty,
+                new Uri(
+                    _editorHtmlPath
+                )
+            );
 
             // 配置通信和导航
-            _webView.CoreWebView2.WebMessageReceived += OnWebMessageReceived;
-            _webView.CoreWebView2.Navigate(_editorHtmlPath);
+            // _webView.CoreWebView2.WebMessageReceived += OnWebMessageReceived;
         }
 
         private void OnWebMessageReceived(object? sender, CoreWebView2WebMessageReceivedEventArgs e)

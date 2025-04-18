@@ -19,15 +19,7 @@ namespace FuckingDo.ViewModels.Pages.MDEditor
             webView.NavigationCompleted += OnWebViewNavigationCompleted;
             webView.SetCurrentValue(FrameworkElement.UseLayoutRoundingProperty, true);
             webView.SetCurrentValue(WebView2.DefaultBackgroundColorProperty, System.Drawing.Color.Transparent);
-            webView.SetCurrentValue(
-                WebView2.SourceProperty,
-                new Uri(
-                    System.IO.Path.Combine(
-                        System.AppDomain.CurrentDomain.BaseDirectory,
-                        @"Assets\Monaco\index.html"
-                    )
-                )
-            );
+
 
             _markDownEditorExtention = new MarkDownEditorExtention(webView);
         }
@@ -39,8 +31,10 @@ namespace FuckingDo.ViewModels.Pages.MDEditor
                 return;
             }
 
-            await _markDownEditorExtention.InitializeAsync();
             await _markDownEditorExtention.SetThemeAsync(Wpf.Ui.Appearance.ApplicationThemeManager.GetAppTheme());
+            await _markDownEditorExtention.SetMarkdownAsync(
+                "Hello world!"
+            );
         }
 
         private void OnWebViewNavigationCompleted(

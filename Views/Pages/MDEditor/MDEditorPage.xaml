@@ -23,29 +23,45 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <!--菜单栏-->
         <Menu
-            Grid.Row="1"
+            Grid.Row="0"
             Margin="0"
             Background="Transparent"
             FontSize="14">
             <ui:MenuItem Header="File" Icon="{ui:SymbolIcon DocumentSplitHint24}">
                 <MenuItem
-                    Command="{Binding ViewModel.MenuActionCommand, Mode=OneWay}"
                     CommandParameter="openFile"
+                    Command="{Binding ViewModel.MenuActionCommand, Mode=OneWay}"
                     Header="Open..." />
                 <MenuItem
-                    Command="{Binding ViewModel.MenuActionCommand, Mode=OneWay}"
                     CommandParameter="saveFile"
+                    Command="{Binding ViewModel.MenuActionCommand, Mode=OneWay}"
                     Header="Save" />
                 <MenuItem
-                    Command="{Binding ViewModel.MenuActionCommand, Mode=OneWay}"
                     CommandParameter="saveFileAs"
+                    Command="{Binding ViewModel.MenuActionCommand, Mode=OneWay}"
                     Header="Save As..." />
                 <Separator />
+            </ui:MenuItem>
+
+            <ui:MenuItem Header="Help" Icon="{ui:SymbolIcon ChatHelp20}">
+                <MenuItem
+                    Command="{Binding ViewModel.MenuActionCommand, Mode=OneWay}"
+                    CommandParameter="viewHelp"
+                    Header="View help" />
+                <MenuItem
+                    Command="{Binding ViewModel.MenuActionCommand, Mode=OneWay}"
+                    CommandParameter="viewFeedback"
+                    Header="Send feedback" />
+                <Separator />
+                <MenuItem
+                    Command="{Binding ViewModel.MenuActionCommand, Mode=OneWay}"
+                    CommandParameter="viewAbout"
+                    Header="About Fucking Do MarkDown" />
             </ui:MenuItem>
 
         </Menu>
